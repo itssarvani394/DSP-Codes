@@ -12,6 +12,7 @@ for i = 1:xlen
 end
 y = sum(y);
 %y = conv(x, h);
+disp(y);
 
 subplot(3, 1, 1);
 stem((0:xlen-1),x,'linewidth',2);
