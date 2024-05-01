@@ -11,7 +11,7 @@ for i = 1:xlen
     end
 end
 y = sum(y);
-%y = conv(x, h);
+%y = conv(x, fliplr(x))
 disp(y);
 
 subplot(3, 1, 1);
