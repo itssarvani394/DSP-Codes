@@ -13,6 +13,7 @@ for i = 1:xlen
     end
 end
 y = sum(y);
+disp(y)
 %y = conv(x, hrev);
 
 subplot(4, 1, 1);
