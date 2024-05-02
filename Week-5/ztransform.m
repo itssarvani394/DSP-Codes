@@ -1,0 +1,35 @@
+clc
+clear all
+close all
+num = input("Enter the numerator coefficient") 
+den  = input("Enter the denominator coefficient") 
+subplot(2,2,1) 
+zplane(num, den) 
+title('zplane') 
+num_a = roots(num) 
+num_b = roots(den) 
+subplot(2, 2,2) 
+zplane(num_a, num_b) 
+title('zplane') 
+[z, p, k] = tf2zp(num, den) 
+subplot(2, 2,3) 
+zplane(z, p) 
+title('zplane') 
+disp("The poles are: ") 
+disp(p) 
+disp("The zeros are: ") 
+disp(z) 
+N= max(length(num), length(den)) 
+[g, t] = impz(num, den, N+1) 
+subplot(2, 2,4) 
+stem(g) 
+title('Impulse Response') 
+disp("Impulse Respose of the system") 
+disp(g) 
+[r, s, t] = residue(num, den) 
+syme z n a
+eq=2^n
+ztrans_out = ztrans(eq) 
+inv_ztransform = iztrans(z_trans_out) 
+figure
+freqz(num, den, 'whole')
